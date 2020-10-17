@@ -1,0 +1,36 @@
+.header{
+  color: #000;
+  background:#CDB0AA  ;//linear-gradient(-45deg, rgba(56,176,179,1) 0%, rgba(182,179,126,1) 19%, rgba(203,140,56,1) 42%, rgba(196,87,28,1) 66%, rgba(204,22,65,1) 86%, rgba(150,76,130,1) 100%);
+	  background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  &__logo{
+    img{
+      width: 70px;
+      height: 70px;
+    }
+  }
+  &__content{
+    
+    padding: 100px 0;
+  }
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  &__title{
+    font-weight: 600;
+    font-size: 40px;
+    padding-bottom: 20px;
+  }
+  &__desc{
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
