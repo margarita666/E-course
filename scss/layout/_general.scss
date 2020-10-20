@@ -23,6 +23,11 @@ body, html {
 	font-family: 'Open Sans', sans-serif;
 }
 
+body{
+	background-color: #b6d8d5;
+	color: #061b33;
+}
+
 .clear::after, .clear::before {
 	content: " ";
 	display: table;
@@ -53,7 +58,7 @@ a{
 }
 
 .navigation{
-	background-color: #3A3CA6;
+	border-bottom: 2px solid #c45238;
 	padding: 10px 0;
 	.e-container{
 		display: flex;
@@ -64,7 +69,7 @@ a{
 .menu{
 	display: flex;
 	&__item{
-		color: #f8f8ff;
+		// color: #f8f8ff;
 		&:not(:last-child){
 			margin-right: 20px;
 		}

@@ -1,0 +1,13 @@
+.about{
+  padding: 60px 0;
+  &__title{
+    margin-bottom: 20px;
+  }
+  &__desc{
+    font-size: 18px;
+    line-height: 23px;
+    &:not(:last-child){
+      margin-bottom: 10px;
+    }
+  }
+}
