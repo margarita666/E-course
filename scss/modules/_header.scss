@@ -1,8 +1,11 @@
 .header{
   // color: #000;
   // background:#b6d8d5  ;//linear-gradient(-45deg, rgba(56,176,179,1) 0%, rgba(182,179,126,1) 19%, rgba(203,140,56,1) 42%, rgba(196,87,28,1) 66%, rgba(204,22,65,1) 86%, rgba(150,76,130,1) 100%);
-	  background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+	  background-image: url('../images/git-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    height: 80vh;
   &__logo{
     img{
       width: 70px;
@@ -10,10 +13,9 @@
     }
   }
   &__content{
-    padding: 100px 0;
-    .e-container{
-      width: 66%;
-      background-color: #84b0af;
+    padding: 140px 0;
+    .content-wr{
+      background-color: rgba(193, 195, 195, .9);
       padding-top: 50px;
       padding-bottom: 50px;
       border-radius: 5px;

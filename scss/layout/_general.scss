@@ -24,8 +24,8 @@ body, html {
 }
 
 body{
-	background-color: #b6d8d5;
-	color: #061b33;
+	background-color: #ECECEC;
+	color: #000;
 }
 
 .clear::after, .clear::before {
@@ -49,6 +49,7 @@ a{
  h2{
 	 font-size: 35px;
 	 font-weight: 600;
+	 line-height: 45px;
  }
 .e-container{
 	max-width: 1200px;
@@ -60,16 +61,32 @@ a{
 .navigation{
 	border-bottom: 2px solid #c45238;
 	padding: 10px 0;
+	background-color: rgba(193, 195, 195, .3);
+	transition: all 0s;
 	.e-container{
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 	}
+	&.fixed{
+		position:fixed;
+		top:0; 
+		left:0;
+		width:100%;
+		z-index: 1;
+		background-color: rgba(193, 195, 195, 1);
+		transition: all 0s;
+		ul{
+			color: #000;
+		}
+	}
 }
 .menu{
 	display: flex;
+	color: #fff;
 	&__item{
-		// color: #f8f8ff;
+		
+		font-weight: 600;
 		&:not(:last-child){
 			margin-right: 20px;
 		}
