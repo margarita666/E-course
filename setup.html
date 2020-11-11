@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Git course">
+	<meta name="author" content="Margarita">
+	<title>Git course</title>
+
+	<link rel="icon" href="images/favicon.png">
+
+	<link rel="stylesheet" href="css/libs/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="css/styles.min.css">
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+<header class="s-header">
+			<nav class="navigation">
+				<div class="e-container">
+					<a href="/index.html" class="header__logo"><img src="images/logo.png" alt=""></a>
+					<ul class="menu">
+						<li class="menu__item menu__item--active"><a href="/setup.html" class="menu__link">Встановлення Git</a></li>
+						<li class="menu__item"><a href="" class="menu__link">Основи Git</a></li>
+						<li class="menu__item"><a href="" class="menu__link">Команди Git</a></li>
+						<li class="menu__item"><a href="/branch-work.html" class="menu__link">Робота з гілками</a></li>
+						<li class="menu__item"><a href="" class="menu__link">GitHub</a></li>
+					</ul>
+				</div>
+			</nav>
+		
+	
+	<div class="s-header__content">
+		<div class="e-container row">
+			<div class="content-wr col-lg-7">
+				<h1 class="header__title">Встановлення Git</h1>
+				<p class="header__desc">Для того, щоб почати працювати з системою контролю версій Git її необхідно попередньо встановити. В інструкції описаний процес завантаження, установки системи контролю версій Git на сервера з операційною системою Windows і підключення до віддаленого сховища GitHub.</p>
+			</div>
+		</div>
+	</div>
+</header>
+<main>
+	<section class="setup">
+		<div class="e-container ">
+            <h2 class="setup__title">Завантаження та інсталяція</h2>	
+            <p>Завантажте інсталятор з офіційного <a href="https://git-scm.com/downloads" target="_blank">сайту</a>. Завантаження почнеться автоматично.</p>
+            <img src="images/setup-main-site.png" alt="Download from main site">	
+            <p>Перейдіть до Завантажень і запустіть завантажений файл.</p>
+            <img class="setup__proc-img" src="images/setup-1.png" alt="Setup">
+            <p>Вкажіть шлях до каталогу в який буде встановлений Git.</p>
+            <img class="setup__proc-img" src="images/setup-2.png" alt="Setup">
+            <p>Оберіть всі необхідні для вас функціїї</p>
+            <img class="setup__proc-img" src="images/setup-3.png" alt="Setup">
+            <p>Введіть ім'я директорії, яка буде створена в Start Menu. При необхідності можна змінити шлях за допомогою кнопки Browse.</p>
+            <img class="setup__proc-img" src="images/setup-4.png" alt="Setup">
+            <p>Оберіть спосіб використання з командного рядка:</p>
+            <ul>
+                <li>Use Git from Git Bash only - використання тільки з командного рядка Bash.</li>
+                <li>Use Git from the Windows Command Prompt - використання командного рядка Bash, а також мінімальний набір команд Git з консолі Windows.</li>
+                <li>Use Git and optional Unix tools from the Windows Command Prompt - використання Git і утиліт Unix з командного рядка Windows, в цьому випадку будуть перезаписані деякі утиліти Windows, наприклад find і sort.</li>
+            </ul>
+            <img class="setup__proc-img" src="images/setup-5.png" alt="Setup">
+            <p>Оберіть бібліотеку, яка буде використана при підключенні по протоколу HTTPS:</p>
+            <ul>
+                <li>OpenSSL - сертифікати сервера будуть перевірятися з використанням Unix-файлу ca-bundle.crt.</li>
+                <li>Windows Secure Channel - сертифікати сервера будуть перевірятися з використанням стандартної бібліотеки Windows.</li>
+            </ul>
+            <img class="setup__proc-img" src="images/setup-6.png" alt="Setup">
+            <p>Переконайтеся, що ви вибрали спосіб обробки закінчення рядків «Checkout Windows-style, commit Unix-style line endings». Це значення гарантує, що Git перетворює LF в CRLF при перевірці текстових файлів. При виконанні текстових файлів CRLF також перетворюється в LF. Це міра сумісності для захисту нових рядків в текстових файлах, що дозволяє легко працювати з текстовими файлами в Windows і на платформах Unix.
+                <i> Примітка: LF і CRLF - керуючий символ для розриву рядків в Unix і Windows відповідно.</i>
+            </p>
+            <img class="setup__proc-img" src="images/setup-7.png" alt="Setup">
+            <p>Далі необхідно конфігурувати використовуваний термінал:</p>
+            <ul>
+                <li>MinTTY - термінал Unix;</li>
+                <li>Windows - стандартний термінал Windows.</li>
+            </ul>
+            <img class="setup__proc-img" src="images/setup-8.png" alt="Setup">
+            <p>Відзначте галочками потрібні вам додаткові функції:</p>
+            <ul>
+                <li>File system caching - кешування файлової системи.</li>
+                <li>Git Credential Manager - включити менеджер облікових даних.</li>
+                <li>Symbolic links - дозволити символічні посилання.</li>
+            </ul>
+            <p>Натисніть кнопку Install.</p>
+            <img class="setup__proc-img" src="images/setup-9.png" alt="Setup">
+            <p>Почнеться процес інсталяції.</p>
+            <img class="setup__proc-img" src="images/setup-10.png" alt="Setup">
+		</div>
+    </section>
+    
+    <section class="settings">
+        <div class="e-container">
+            <h2>Налаштування Git</h2>
+            <p>У Git є налаштування користувача, від якого буде йти робота. Це розумна і необхідна річ, так як коли створюється Комміт, гіт бере саме цю інформацію для поля Author.</p>
+            <p>Щоб налаштувати ім'я користувача та пароль для всіх проектів, потрібно прописати наступні команди:</p>
+            <div class="settings__code-wr">
+                <code class="">git config --global user.name ”Ivan Ivanov”<br>
+                git config --global user.email ivan.ivanov@gmail.com</code>
+            </div>
+            <p>Якщо є необхідність для конкретного проекту змінити автора (для особистого проекту, наприклад), можна прибрати --global, і вийде так :</p>
+            <div class="settings__code-wr">
+                <code class="">git config user.name ”Ivan Ivanov”<br>
+                git config user.email ivan.ivanov@gmail.com</code>
+            </div>
+        </div>
+    </section>
+	
+</main>
+<footer class="footer">
+    <div class="e-container row">
+        <h2 class="col-md-12">Корисні посилання</h2>
+        <ul class="col-md-6">
+            <li><a href="https://git-scm.com/" target="_blank">Документація Git</a></li>
+            <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+        </ul>
+    </div>
+    
+</footer>
+	<!-- Scripts -->
+	<script src="js/libs/jquery-3.4.1.min.js"></script>
+	<script src="js/main.js"></script>
+
+	<!-- LiveReload Script -->
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>

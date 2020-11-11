@@ -13,7 +13,7 @@
     }
   }
   &__content{
-    padding: 140px 0;
+    padding: 4% 0;
     .content-wr{
       background-color: rgba(193, 195, 195, .9);
       padding-top: 50px;
@@ -42,5 +42,16 @@
     font-size: 20px;
     line-height: 30px;
     text-align: center;
+  }
+}
+
+.s-header{
+  &__content{
+    padding: 50px 0;
+  }
+}
+.br-header{
+  &__content{
+    padding: 50px 0;
   }
 }

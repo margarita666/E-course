@@ -5,7 +5,7 @@
 	border: 0;
 	outline: none;
 	box-sizing: border-box;
-	transition: all .3s ease-in-out;
+	// transition: all .3s ease-in-out;
 }
 
 img {
@@ -60,7 +60,7 @@ a{
 
 .navigation{
 	border-bottom: 2px solid #c45238;
-	padding: 10px 0;
+	padding: 5px 0;
 	background-color: rgba(193, 195, 195, .3);
 	transition: all 0s;
 	.e-container{
@@ -83,12 +83,22 @@ a{
 }
 .menu{
 	display: flex;
-	color: #fff;
+	color: #c45238;
 	&__item{
 		
 		font-weight: 600;
 		&:not(:last-child){
 			margin-right: 20px;
+		}
+		&--active{
+			&::after{
+				content: '';
+				display: block;
+				height: 1px;
+				background-color: #c45238;
+				width: 100%;
+				margin-top: 5px;
+			}
 		}
 	}
 }
