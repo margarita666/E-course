@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Git course">
+	<meta name="author" content="Margarita">
+	<title>Git course</title>
+
+	<link rel="icon" href="images/favicon.png">
+
+	<link rel="stylesheet" href="css/libs/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="css/styles.min.css">
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+<header class="s-header">
+			<nav class="navigation">
+				<div class="e-container">
+					<a href="/index.html" class="header__logo"><img src="images/logo.png" alt=""></a>
+					<ul class="menu">
+						<li class="menu__item"><a href="/setup.html" class="menu__link">Встановлення Git</a></li>
+						<li class="menu__item menu__item--active"><a href="/base.html" class="menu__link">Основи Git</a></li>
+						<li class="menu__item"><a href="" class="menu__link">Команди Git</a></li>
+						<li class="menu__item "><a href="/branch-work.html" class="menu__link">Робота з гілками</a></li>
+						<li class="menu__item"><a href="" class="menu__link">GitHub</a></li>
+					</ul>
+				</div>
+			</nav>
+		
+	
+	<div class="br-header__content">
+		<div class="e-container row">
+			<div class="content-wr col-lg-12">
+				<h1 class="header__title">Основи Git</h1>
+				<p class="header__desc">Git - це розподілена система контролю версій нашого коду. Навіщо вона нам? Для розподілених команд потрібна якась система управління роботи. Потрібна, щоб відстежувати зміни, які відбуваються з часом. Тобто крок за кроком ми бачимо, які файли змінилися і як. Особливо це важливо, коли аналізуєш, що було зроблено в рамках одного завдання: це дає можливість повертатися назад.</p>
+			</div>
+		</div>
+	</div>
+</header>
+<main>
+	<section class="base">
+		<div class="e-container ">
+      <h2 class="base__title">Стани в Git</h2>	
+      <p>У Гіта є кілька станів, які потрібно зрозуміти і запам'ятати:</p>
+      <ul>
+        <li>той що неможливо відстежити (untracked);</li>
+        <li>змінений (modified);</li>
+        <li>підготовлений (staged);</li>
+        <li>закоміченний (committed)</li>
+      </ul>
+      <p>Це стани, в яких знаходяться файли з нашого коду. Тобто, їх життєвий шлях зазвичай виглядає так:</p>
+        <ol>
+          <li>Файл, який створений і не доданий в репозиторій, буде в стані untracked.</li>
+          <li>Робимо зміни в файлах, які вже додані в гіт репозиторій - знаходяться в стані modified.</li>
+          <li>З тих файлів, які ми змінили, обираємо тільки ті (або всі), які потрібні нам (наприклад, скомпільовані класи нам не потрібні), і ці класи зі змінами потрапляють в стан staged.</li>
+          <li>З заготовлених файлів зі стану staged створюється комміт і переходить вже в гіт репозиторій. Після цього staged стан - пустий. Але modified ще може щось в собі містити.</li>
+        </ol>
+        <p>Виглядає це так</p>
+        <img src="/images/areas.png" alt="">
+
+      <h2 class="base__title">Що таке комміт</h2>	
+      <p>Комміт - це основний об'єкт в управлінні контролю версій. Він містить всі зміни за час цього комміту. Комміти пов'язані між з собою як однозв'язний список.</p>
+      <p>А саме: Є перший комміт, коли створюється другий комміт, то він (другий) знає, що йде після першого. І таким чином можна відстежити інформацію.</p>
+      <p>Також у коммітов є ще своя інформація, так звані метадані:</p>  
+      <ul>
+        <li>унікальний ідентифікатор коммітов, за яким можна його знайти;</li>
+        <li>ім'я автора коммітов, який створив його;</li>
+        <li>дата створення коммітов;</li>
+        <li>коментар, який описує, що було зроблено під час цього коммітов.</li>
+      </ul>         
+        <p>Ось як це виглядає:</p>      
+        <img src="/images/commit.png" alt="" class="commit-img">
+      <h2 class="base__title">Що таке гілка</h2>	
+        <p>Гілка - це покажчик якогось коммітов. Так як комміт знає, який комміт був до нього, коли гілка вказує на якийсь комміт, до неї відносяться і всі ті попередні.</p>
+        <p>Виходячи з цього можна сказати, що гілок, що вказують на один і той же комміт, може бути скільки завгодно багато.</p>
+        <p>Робота відбувається в гілках, тому коли створюється новий комміт, гілка переносить свій покажчик на новіший коммыт.</p>    
+          <img src="/images/base-branch.png" alt="" class="branch-img">
+          <p>Детальніше про роботу з гілками можна почитати у <a href="/branch-work.html">цьому розділі</a></p>
+    </section>
+    
+    <section class="settings">
+        
+    </section>
+	
+</main>
+<footer class="footer">
+    <div class="e-container row">
+        <h2 class="col-md-12">Корисні посилання</h2>
+        <ul class="col-md-6">
+            <li><a href="https://git-scm.com/" target="_blank">Офіційний сайт Git</a></li>
+            <li><a href="https://git-scm.com/book/ru/v2" target="_blank">Документація Git</a></li>
+            <li><a href="http://uleming.github.io/gitbook/index.html" target="_blank">Git Community</a></li>
+            <li><a href="https://try.github.io/" target="_blank">Try Git</a></li>
+            <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+        </ul>
+    </div>
+    <div class="copy">
+      <p>Черниш Маргарита</p>
+      <p>2020</p>
+  </div>
+</footer>
+	<!-- Scripts -->
+	<script src="js/libs/jquery-3.4.1.min.js"></script>
+	<script src="js/main.js"></script>
+
+	<!-- LiveReload Script -->
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>

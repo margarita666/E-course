@@ -39,8 +39,8 @@
     text-align: center;
   }
   &__desc{
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 18px;
+    line-height: 1.4;
     text-align: center;
   }
 }
@@ -48,10 +48,22 @@
 .s-header{
   &__content{
     padding: 50px 0;
+    h1{
+      text-align: left;
+    }
+    p{
+      text-align: left;
+    }
   }
 }
 .br-header{
   &__content{
     padding: 50px 0;
+    h1{
+      text-align: left;
+    }
+    p{
+      text-align: left;
+    }
   }
 }

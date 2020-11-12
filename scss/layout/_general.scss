@@ -84,6 +84,9 @@ a{
 .menu{
 	display: flex;
 	color: #c45238;
+	&.white{
+		color: #fff;
+	}
 	&__item{
 		
 		font-weight: 600;
