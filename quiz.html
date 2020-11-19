@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Git course">
+	<meta name="author" content="Margarita">
+	<title>Git course</title>
+
+	<link rel="icon" href="images/favicon.png">
+
+	<link rel="stylesheet" href="css/libs/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="css/styles.min.css">
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+<header class="s-header">
+			<nav class="navigation">
+				<div class="e-container">
+					<a href="/index.html" class="header__logo"><img src="images/logo.png" alt=""></a>
+					<ul class="menu">
+						<li class="menu__item"><a href="/setup.html" class="menu__link">Встановлення Git</a></li>
+						<li class="menu__item "><a href="/base.html" class="menu__link">Основи Git</a></li>
+						<li class="menu__item "><a href="/commands.html" class="menu__link">Команди Git</a></li>
+						<li class="menu__item "><a href="/branch-work.html" class="menu__link">Робота з гілками</a></li>
+						<li class="menu__item menu__item--active"><a href="/quiz.html" class="menu__link">Тест</a></li>
+					</ul>
+				</div>
+			</nav>
+		
+	
+	<div class="c-header__content">
+		<div class="e-container row">
+			<div class="content-wr col-lg-12">
+				<h1 class="header__title">Основні команди в Git</h1>
+				<!-- <p class="header__desc">Git - це розподілена система контролю версій нашого коду. Навіщо вона нам? Для розподілених команд потрібна якась система управління роботи. Потрібна, щоб відстежувати зміни, які відбуваються з часом. Тобто крок за кроком ми бачимо, які файли змінилися і як. Особливо це важливо, коли аналізуєш, що було зроблено в рамках одного завдання: це дає можливість повертатися назад.</p> -->
+			</div>
+		</div>
+	</div>
+</header>
+<main class="quiz-main">
+  <div id="container">
+    <header>
+      <h1>Simple JavaScript Quiz</h1>
+      <p>Test your knowledge in <strong>JavaScript Fundamentals</strong></p>
+    </header>
+    <section>
+      <div id="results"></div>
+      <form name="quizForm" onsubmit="return submitAnswers()">
+        <h3>1. In which HTML element do we put in JavaScript code?</h3>
+        <input type="radio" name="q1" value="a" id="q1a">a. &lt;js&gt;<br>
+        <input type="radio" name="q1" value="b" id="q1b">b. &lt;script&gt;<br>
+        <input type="radio" name="q1" value="c" id="q1c">c. &lt;body&gt;<br>
+        <input type="radio" name="q1" value="d" id="q1d">d. &lt;link&gt;<br>
+  
+        <br><br>
+        <h3>2. What is the vision of JavaScript varibles called?</h3>
+        <input type="radio" name="q2" value="a" id="q2a">a. inline<br>
+        <input type="radio" name="q2" value="b" id="q2b">b. line of sight<br>
+        <input type="radio" name="q2" value="c" id="q2c">c. directional<br>
+        <input type="radio" name="q2" value="d" id="q2d">d. scope<br>      
+        
+        <br><br>
+        <h3>3. JavaScript is a version of Java.</h3>
+        <input type="radio" name="q3" value="a" id="q3a">a. true<br>
+        <input type="radio" name="q3" value="b" id="q3b">b. false<br>  
+        
+        <br><br>
+        <input type="submit" value="Submit Answers">
+      </form>
+    </section>
+    <footer>
+      <p>Copyright &copy; 2015</p>
+    </footer> 
+  </div>
+</main>
+<footer class="footer">
+    <div class="e-container row">
+        <h2 class="col-md-12">Корисні посилання</h2>
+        <ul class="col-md-6">
+            <li><a href="https://git-scm.com/" target="_blank">Офіційний сайт Git</a></li>
+            <li><a href="https://git-scm.com/book/ru/v2" target="_blank">Документація Git</a></li>
+            <li><a href="http://uleming.github.io/gitbook/index.html" target="_blank">Git Community</a></li>
+            <li><a href="https://try.github.io/" target="_blank">Try Git</a></li>
+            <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+        </ul>
+    </div>
+    <div class="copy">
+      <p>Черниш Маргарита</p>
+      <p>2020</p>
+  </div>
+</footer>
+	<!-- Scripts -->
+	<script src="js/libs/jquery-3.4.1.min.js"></script>
+	<script src="js/main.js"></script>
+
+	<!-- LiveReload Script -->
+  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+  
+</body>
+</html>

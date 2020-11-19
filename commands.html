@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Git course">
+	<meta name="author" content="Margarita">
+	<title>Git course</title>
+
+	<link rel="icon" href="images/favicon.png">
+
+	<link rel="stylesheet" href="css/libs/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="css/styles.min.css">
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+<header class="s-header">
+			<nav class="navigation">
+				<div class="e-container">
+					<a href="/index.html" class="header__logo"><img src="images/logo.png" alt=""></a>
+					<ul class="menu">
+						<li class="menu__item"><a href="/setup.html" class="menu__link">Встановлення Git</a></li>
+						<li class="menu__item "><a href="/base.html" class="menu__link">Основи Git</a></li>
+						<li class="menu__item menu__item--active"><a href="/commands.html" class="menu__link">Команди Git</a></li>
+						<li class="menu__item "><a href="/branch-work.html" class="menu__link">Робота з гілками</a></li>
+						<li class="menu__item"><a href="/quiz.html" class="menu__link">Тест</a></li>
+					</ul>
+				</div>
+			</nav>
+		
+	
+	<div class="c-header__content">
+		<div class="e-container row">
+			<div class="content-wr col-lg-12">
+				<h1 class="header__title">Основні команди в Git</h1>
+				<!-- <p class="header__desc">Git - це розподілена система контролю версій нашого коду. Навіщо вона нам? Для розподілених команд потрібна якась система управління роботи. Потрібна, щоб відстежувати зміни, які відбуваються з часом. Тобто крок за кроком ми бачимо, які файли змінилися і як. Особливо це важливо, коли аналізуєш, що було зроблено в рамках одного завдання: це дає можливість повертатися назад.</p> -->
+			</div>
+		</div>
+	</div>
+</header>
+<main class="commands-main">
+	<nav class="commands-nav">
+    <a href="#base-com" class="active"> Базові команди </a>
+    <a href="#repo-com"> Віддалені репозиторії </a>
+    <a href="#branch-com" class=""> Розгалуження </a>
+    <a href="#addit-com"> Додаткові команди </a>
+  </nav>
+	<section id="base-com">
+    <div class="e-container">
+      <h2>Базові команди</h2>
+      <h3>Створення нового репозиторію</h3>
+      <p>Як ми відзначили раніше, git зберігає свої файли та історію прямо в папці проекту. Щоб створити новий репозиторій, нам потрібно відкрити термінал, зайти в папку нашого проекту і виконати команду init. Це включить додаток в цій конкретній папці і створить приховану директорію .git, де буде зберігатися історія сховища та налаштування.</p>
+      <div class="code-wr">
+        <code class="">C:\Users\Desktop\htmlB\University>git init<br>
+          Initialized empty Git repository in C:/Users/Margarita/Desktop/htmlB/University/.git/</code>
+      </div>
+      <p>Це означає, що наш репозиторій був успішно створений, але поки що порожній.</p>
+    </div>
+  </section>
+
+  <section id="repo-com">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, quaerat? Assumenda ut amet laudantium, architecto adipisci ipsum autem. Quam odit deleniti laborum maxime illo! Eum excepturi nulla ipsa fugit deleniti assumenda voluptatibus maxime enim corrupti doloremque. Fugit at placeat dolor nemo minus culpa rerum molestiae quaerat voluptate maiores ex obcaecati deleniti eveniet, modi totam optio? Voluptatem dolorum ea ut expedita nam consequuntur non totam, et ducimus blanditiis odit aliquid minima cum aspernatur natus corporis maiores molestias veritatis amet atque harum excepturi ab vero. Incidunt dolorem accusantium molestiae reiciendis quibusdam voluptatem quasi praesentium, facilis, unde eligendi a est temporibus eaque molestias odit dolore omnis. Rerum molestias in odio officia praesentium corrupti, saepe exercitationem quam eveniet distinctio labore amet deleniti culpa tempora sunt sit nobis earum vero necessitatibus? Labore est veniam minus dolor. Ex tenetur iste repellat. Nulla, ut ab et unde voluptatem repellat itaque? Distinctio ex reprehenderit deleniti eveniet, alias eaque ipsam maxime voluptate, facere omnis rerum corrupti possimus veniam expedita atque aliquid eius cumque aperiam eum ut optio quaerat nemo explicabo? Praesentium aspernatur neque ullam natus ipsum quis odit dignissimos vel, suscipit cumque dolores eum possimus, quaerat veniam velit dolore unde ad distinctio atque iusto alias nobis? Enim impedit est quam debitis consequuntur odit eos similique magni pariatur! Illum distinctio assumenda nobis eos impedit provident ratione nulla, amet illo tenetur aut quia consequatur molestiae veritatis! Repudiandae unde beatae exercitationem quo eius alias officia adipisci possimus, error ratione ut omnis nesciunt fuga reprehenderit dolore atque doloribus earum non pariatur et nam nisi dolorem. Odio deserunt ducimus eveniet aperiam? Mollitia fugit nisi voluptas incidunt quaerat laudantium officia. Quae commodi repellendus illum atque! Nesciunt itaque cumque expedita quo, corrupti molestias vero facere minus blanditiis, quae dicta eligendi hic doloribus nemo error voluptatem porro sunt aut consequatur. Est beatae repellat repellendus alias veritatis molestias quod ut libero totam suscipit architecto neque quae odio eaque ab ducimus dolores laudantium, quos voluptatum impedit? Repellendus, quisquam assumenda inventore vitae commodi, cumque praesentium iste debitis provident soluta sunt vel quaerat pariatur, molestiae eligendi facilis quo perspiciatis! Error exercitationem quos magnam, animi nobis, quaerat sed eveniet ipsa cumque quidem illo veniam optio mollitia minima non soluta a molestias, voluptatem magni dolore consectetur. Consectetur, nisi. Facilis totam rerum omnis reprehenderit autem vel eligendi perferendis? Quam, amet aperiam ducimus rerum reiciendis placeat corporis ea neque reprehenderit possimus quibusdam expedita aspernatur cum quod voluptate? Vel inventore laborum laboriosam adipisci quis repellat doloremque.</section>
+  <section id="branch-com">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam sapiente, obcaecati quae dignissimos voluptatibus, earum aut culpa fuga ex, magni sed tempora assumenda voluptatum totam aperiam temporibus illo. Labore inventore ducimus molestias tempora odio velit tempore ipsam, blanditiis beatae, quae quas! Aperiam rem magni inventore ducimus hic ex odit quasi placeat ipsa repellendus neque numquam quos, sit quia quis recusandae. Culpa, incidunt? Quisquam iusto aliquid et quam. Et, quibusdam. Doloremque quibusdam animi autem facere ducimus tempora asperiores quam ex porro voluptatum! Perferendis, debitis quasi unde porro assumenda quibusdam nam nobis, odit ducimus ut officia quos beatae nostrum, dignissimos quo cupiditate animi neque. Esse voluptate voluptatum corrupti odit iste et iusto aut ipsum quae. Adipisci ex perferendis veniam? Cum, iure delectus corporis consectetur provident cupiditate totam quasi sint vero tenetur voluptate accusamus dolorum? Incidunt aspernatur consequatur perspiciatis sunt blanditiis exercitationem ducimus provident, tempore eum quae rem consectetur praesentium quis labore voluptatem adipisci ab officiis architecto velit omnis facere. Assumenda dolorum earum hic obcaecati consequatur temporibus repudiandae ullam qui cum, iusto dolor ipsa voluptatum laboriosam! Veniam, voluptatibus iste? Totam doloribus nulla qui sequi, eos blanditiis nemo consequatur. Itaque doloribus voluptatum quis voluptatibus quas? Quasi quisquam sed recusandae ratione consequuntur dolor non incidunt, corporis in harum corrupti exercitationem, fugiat earum unde ea accusamus quibusdam labore, eveniet pariatur illo. Ullam temporibus omnis, nemo pariatur, atque voluptatem voluptates blanditiis ipsam veritatis obcaecati nihil animi, fugit quibusdam cumque ipsa optio est eligendi in sit sunt. Esse id fugiat omnis reprehenderit temporibus doloremque laudantium nobis minus, mollitia eveniet eum incidunt delectus optio aut quis, et dignissimos perspiciatis deleniti quod? Ducimus vitae cum, dolores deleniti totam rerum illo, iste fugiat sapiente, labore corrupti neque voluptate fuga officiis animi consectetur cupiditate dolorem maxime quae fugit. Labore eius praesentium sequi doloribus quo perspiciatis dicta fuga saepe odio nulla beatae voluptatem exercitationem, eveniet ex, expedita rerum neque. Natus aspernatur qui architecto hic ratione laborum similique odio porro totam consequuntur dolorum consequatur placeat quo unde ab, distinctio accusamus ea. Unde suscipit, ducimus quae, praesentium accusamus in labore placeat obcaecati error distinctio, explicabo odit fuga quod officiis possimus asperiores iusto quaerat quis! Nostrum, aliquam. Assumenda rem veritatis fugit eius consectetur tempore? Excepturi culpa saepe, officiis iste, nam dicta iusto sunt autem repellat quae et natus aut illo dolores. Fugit pariatur sed neque quisquam ad tempora nemo laborum facilis dicta itaque maiores at asperiores ullam, expedita, nobis magnam. Reiciendis laudantium unde nulla perspiciatis illum?</section>
+  <section id="addit-com">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi eligendi a consequatur odio perspiciatis sint numquam! Ipsam nesciunt cumque porro quae quam nisi reiciendis ut id labore ducimus nostrum vero tenetur repellendus veniam itaque, voluptate magni. Porro fugit debitis adipisci ipsa error repudiandae illum sequi molestiae cupiditate doloremque laudantium quisquam animi, facere temporibus sint quo mollitia vitae, hic asperiores est. Aut enim, natus iusto non amet sunt quia fugit commodi molestias assumenda ducimus tenetur dicta ratione ex hic quod. Doloremque voluptatibus reiciendis ab! Quasi error est natus nobis aliquam repellendus quo dicta labore eius! Commodi quisquam quos ullam omnis expedita laborum odit? Iure similique, iusto ab nemo in deserunt quidem officiis nam neque. Commodi quae pariatur harum laudantium ipsa tempore dicta qui magni culpa at adipisci nihil a molestias, repellat nisi assumenda, voluptates incidunt aliquid et quis saepe? Laborum exercitationem fugiat consequuntur, repudiandae dignissimos accusamus beatae earum expedita enim sint. Laudantium expedita tempora autem? Nobis corrupti deserunt, aliquid at expedita aliquam ex unde quia dolorem culpa non mollitia facere laborum eaque nostrum voluptates inventore dolorum sequi voluptas est? Ad corrupti neque cumque, repellat cupiditate, itaque maxime perspiciatis dolores, dicta consequatur rem similique quo! Necessitatibus dolor ducimus perferendis soluta, atque nihil corrupti laboriosam quae. Esse, delectus quae labore amet dolorem blanditiis dolores eveniet tenetur quam voluptates eos commodi, doloremque debitis suscipit similique in id consequatur at earum dicta eum aliquid ullam! Deserunt accusamus optio libero tenetur temporibus adipisci assumenda officiis dolorem, cumque possimus harum! Perferendis consequuntur necessitatibus cumque esse laborum sed dolore quasi ex placeat excepturi fuga aspernatur, veniam dolor omnis consectetur enim laboriosam amet praesentium possimus eius sequi! Error minus vitae modi, earum magnam voluptatibus quidem hic fugiat incidunt aut pariatur? Quo, quidem? Facilis nostrum, voluptatum a vero quis quisquam blanditiis. Nisi laudantium reprehenderit mollitia. Odio illum, minima doloribus quod iure vero quos nihil magni eaque alias minus similique mollitia aspernatur, eius repudiandae quas hic enim eos. Voluptatum, dicta mollitia velit exercitationem cum provident ullam iusto itaque, sequi omnis quos eius consectetur ipsam minus necessitatibus temporibus officiis, reiciendis magnam? Repudiandae quidem temporibus fuga dolorum? Impedit atque dolores sit blanditiis? Delectus odio modi labore, praesentium cumque provident, officia at iusto saepe exercitationem vero cum! Sint exercitationem cum odio consequuntur ipsum perferendis, unde ratione inventore vel rem aliquam animi, numquam doloribus placeat explicabo quisquam debitis! Soluta doloremque culpa quasi optio repellat deleniti quae eligendi ab, voluptatum enim modi, doloribus eos ipsa odio!</section>
+</main>
+<footer class="footer">
+    <div class="e-container row">
+        <h2 class="col-md-12">Корисні посилання</h2>
+        <ul class="col-md-6">
+            <li><a href="https://git-scm.com/" target="_blank">Офіційний сайт Git</a></li>
+            <li><a href="https://git-scm.com/book/ru/v2" target="_blank">Документація Git</a></li>
+            <li><a href="http://uleming.github.io/gitbook/index.html" target="_blank">Git Community</a></li>
+            <li><a href="https://try.github.io/" target="_blank">Try Git</a></li>
+            <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+        </ul>
+    </div>
+    <div class="copy">
+      <p>Черниш Маргарита</p>
+      <p>2020</p>
+  </div>
+</footer>
+	<!-- Scripts -->
+	<script src="js/libs/jquery-3.4.1.min.js"></script>
+	<script src="js/main.js"></script>
+
+	<!-- LiveReload Script -->
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>
