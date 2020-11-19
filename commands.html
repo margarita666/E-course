@@ -22,9 +22,9 @@
 					<a href="/index.html" class="header__logo"><img src="images/logo.png" alt=""></a>
 					<ul class="menu">
 						<li class="menu__item"><a href="/setup.html" class="menu__link">Встановлення Git</a></li>
-						<li class="menu__item "><a href="/base.html" class="menu__link">Основи Git</a></li>
+            <li class="menu__item "><a href="/base.html" class="menu__link">Основи Git</a></li>
+            <li class="menu__item "><a href="/branch-work.html" class="menu__link">Робота з гілками</a></li>
 						<li class="menu__item menu__item--active"><a href="/commands.html" class="menu__link">Команди Git</a></li>
-						<li class="menu__item "><a href="/branch-work.html" class="menu__link">Робота з гілками</a></li>
 						<li class="menu__item"><a href="/quiz.html" class="menu__link">Тест</a></li>
 					</ul>
 				</div>
@@ -45,7 +45,7 @@
     <a href="#base-com" class="active"> Базові команди </a>
     <a href="#repo-com"> Віддалені репозиторії </a>
     <a href="#branch-com" class=""> Розгалуження </a>
-    <a href="#addit-com"> Додаткові команди </a>
+    <a href="#addit-com"> Додатково </a>
   </nav>
 	<section id="base-com">
     <div class="e-container">
@@ -57,12 +57,194 @@
           Initialized empty Git repository in C:/Users/Margarita/Desktop/htmlB/University/.git/</code>
       </div>
       <p>Це означає, що наш репозиторій був успішно створений, але поки що порожній.</p>
+
+      <h3>Визначення стану</h3>
+      <p>status - це ще одна найважливіша команда, яка показує інформацію про поточний стан сховища: чи є актуальною інформація на ньому, чи немає чогось нового, що змінилося, і так далі.</p>
+      <div class="code-wr">
+        <code class="">git status<br>
+          On branch master<br>
+          Changes not staged for commit:<br>
+            (use "git add <file>..." to update what will be committed)<br>
+            (use "git checkout -- <file>..." to discard changes in working directory)<br>
+          
+                  modified:   css/styles.min.css<br>
+                  modified:   css/styles.min.css.map<br>
+                  modified:   index.html<br>
+                  modified:   js/main.js<br>
+                  modified:   quiz.html<br>
+                  modified:   scss/modules/_commands-main.scss<br>
+                  modified:   scss/modules/_quiz.scss<br>
+                  modified:   setup.html<br>
+          
+          no changes added to commit (use "git add" and/or "git commit -a")</code>
+      </div>
+      <p>Повідомлення говорить про те, що деякі файли не відстежуються. Це означає, що файли новиі і система ще не знає, чи потрібно стежити за змінами у файлах або його можна просто ігнорувати. Для того, щоб почати відстежувати новий файл, потрібно його спеціальним чином оголосити.</p>
+      
+      <h3>Підготовка файлів</h3>
+      <p>У git є концепція області підготовлених файлів. Можна уявити її як полотно, на яке наносять зміни, які потрібні в комміті. Спершу він порожній, але потім ми додаємо на нього файли (або частини файлів, або навіть поодинокі рядки) командою add і, нарешті, коммітимо все потрібне в репозиторій (створюємо зліпок потрібного нам стану) командою commit.
+        Додамо один з файлів:</p>
+      <div class="code-wr">
+        <code class="">git add base.html</code>
+      </div>
+      <p>Якщо нам потрібно додати всі, що знаходиться в директорії, ми можемо використовувати</p>
+      <div class="code-wr">
+        <code class="">git add .</code>
+      </div>
+      <p>Де "." означає що необхідно додати все.</p> 
+
+      <h3>Комміт(фіксація змін)</h3>
+      <p>Комміт є станом сховища в певний момент часу. Це схоже на снапшот, до якого ми можемо повернутися і побачити стан об'єктів на певний момент часу.
+        Щоб зафіксувати зміни, нам потрібна хоча б одна зміна в області підготовки (ми тільки що створили її за допомогою git add), після якого ми можемо робити комміт:</p>
+      <div class="code-wr">
+        <code class="">git commit -m "add base.html"</code>
+      </div>
+      <p>Ця команда створить новий комміт з усіма змінами з галузі підготовки (додавання файлу base.html). Ключ -m - це створенbq користувачем опис всіх змін, включених в комміт. Вважається доброю практикою робити комміти часто і завжди писати змістовні коментарі..</p>
     </div>
   </section>
 
-  <section id="repo-com">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, quaerat? Assumenda ut amet laudantium, architecto adipisci ipsum autem. Quam odit deleniti laborum maxime illo! Eum excepturi nulla ipsa fugit deleniti assumenda voluptatibus maxime enim corrupti doloremque. Fugit at placeat dolor nemo minus culpa rerum molestiae quaerat voluptate maiores ex obcaecati deleniti eveniet, modi totam optio? Voluptatem dolorum ea ut expedita nam consequuntur non totam, et ducimus blanditiis odit aliquid minima cum aspernatur natus corporis maiores molestias veritatis amet atque harum excepturi ab vero. Incidunt dolorem accusantium molestiae reiciendis quibusdam voluptatem quasi praesentium, facilis, unde eligendi a est temporibus eaque molestias odit dolore omnis. Rerum molestias in odio officia praesentium corrupti, saepe exercitationem quam eveniet distinctio labore amet deleniti culpa tempora sunt sit nobis earum vero necessitatibus? Labore est veniam minus dolor. Ex tenetur iste repellat. Nulla, ut ab et unde voluptatem repellat itaque? Distinctio ex reprehenderit deleniti eveniet, alias eaque ipsam maxime voluptate, facere omnis rerum corrupti possimus veniam expedita atque aliquid eius cumque aperiam eum ut optio quaerat nemo explicabo? Praesentium aspernatur neque ullam natus ipsum quis odit dignissimos vel, suscipit cumque dolores eum possimus, quaerat veniam velit dolore unde ad distinctio atque iusto alias nobis? Enim impedit est quam debitis consequuntur odit eos similique magni pariatur! Illum distinctio assumenda nobis eos impedit provident ratione nulla, amet illo tenetur aut quia consequatur molestiae veritatis! Repudiandae unde beatae exercitationem quo eius alias officia adipisci possimus, error ratione ut omnis nesciunt fuga reprehenderit dolore atque doloribus earum non pariatur et nam nisi dolorem. Odio deserunt ducimus eveniet aperiam? Mollitia fugit nisi voluptas incidunt quaerat laudantium officia. Quae commodi repellendus illum atque! Nesciunt itaque cumque expedita quo, corrupti molestias vero facere minus blanditiis, quae dicta eligendi hic doloribus nemo error voluptatem porro sunt aut consequatur. Est beatae repellat repellendus alias veritatis molestias quod ut libero totam suscipit architecto neque quae odio eaque ab ducimus dolores laudantium, quos voluptatum impedit? Repellendus, quisquam assumenda inventore vitae commodi, cumque praesentium iste debitis provident soluta sunt vel quaerat pariatur, molestiae eligendi facilis quo perspiciatis! Error exercitationem quos magnam, animi nobis, quaerat sed eveniet ipsa cumque quidem illo veniam optio mollitia minima non soluta a molestias, voluptatem magni dolore consectetur. Consectetur, nisi. Facilis totam rerum omnis reprehenderit autem vel eligendi perferendis? Quam, amet aperiam ducimus rerum reiciendis placeat corporis ea neque reprehenderit possimus quibusdam expedita aspernatur cum quod voluptate? Vel inventore laborum laboriosam adipisci quis repellat doloremque.</section>
-  <section id="branch-com">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam sapiente, obcaecati quae dignissimos voluptatibus, earum aut culpa fuga ex, magni sed tempora assumenda voluptatum totam aperiam temporibus illo. Labore inventore ducimus molestias tempora odio velit tempore ipsam, blanditiis beatae, quae quas! Aperiam rem magni inventore ducimus hic ex odit quasi placeat ipsa repellendus neque numquam quos, sit quia quis recusandae. Culpa, incidunt? Quisquam iusto aliquid et quam. Et, quibusdam. Doloremque quibusdam animi autem facere ducimus tempora asperiores quam ex porro voluptatum! Perferendis, debitis quasi unde porro assumenda quibusdam nam nobis, odit ducimus ut officia quos beatae nostrum, dignissimos quo cupiditate animi neque. Esse voluptate voluptatum corrupti odit iste et iusto aut ipsum quae. Adipisci ex perferendis veniam? Cum, iure delectus corporis consectetur provident cupiditate totam quasi sint vero tenetur voluptate accusamus dolorum? Incidunt aspernatur consequatur perspiciatis sunt blanditiis exercitationem ducimus provident, tempore eum quae rem consectetur praesentium quis labore voluptatem adipisci ab officiis architecto velit omnis facere. Assumenda dolorum earum hic obcaecati consequatur temporibus repudiandae ullam qui cum, iusto dolor ipsa voluptatum laboriosam! Veniam, voluptatibus iste? Totam doloribus nulla qui sequi, eos blanditiis nemo consequatur. Itaque doloribus voluptatum quis voluptatibus quas? Quasi quisquam sed recusandae ratione consequuntur dolor non incidunt, corporis in harum corrupti exercitationem, fugiat earum unde ea accusamus quibusdam labore, eveniet pariatur illo. Ullam temporibus omnis, nemo pariatur, atque voluptatem voluptates blanditiis ipsam veritatis obcaecati nihil animi, fugit quibusdam cumque ipsa optio est eligendi in sit sunt. Esse id fugiat omnis reprehenderit temporibus doloremque laudantium nobis minus, mollitia eveniet eum incidunt delectus optio aut quis, et dignissimos perspiciatis deleniti quod? Ducimus vitae cum, dolores deleniti totam rerum illo, iste fugiat sapiente, labore corrupti neque voluptate fuga officiis animi consectetur cupiditate dolorem maxime quae fugit. Labore eius praesentium sequi doloribus quo perspiciatis dicta fuga saepe odio nulla beatae voluptatem exercitationem, eveniet ex, expedita rerum neque. Natus aspernatur qui architecto hic ratione laborum similique odio porro totam consequuntur dolorum consequatur placeat quo unde ab, distinctio accusamus ea. Unde suscipit, ducimus quae, praesentium accusamus in labore placeat obcaecati error distinctio, explicabo odit fuga quod officiis possimus asperiores iusto quaerat quis! Nostrum, aliquam. Assumenda rem veritatis fugit eius consectetur tempore? Excepturi culpa saepe, officiis iste, nam dicta iusto sunt autem repellat quae et natus aut illo dolores. Fugit pariatur sed neque quisquam ad tempora nemo laborum facilis dicta itaque maiores at asperiores ullam, expedita, nobis magnam. Reiciendis laudantium unde nulla perspiciatis illum?</section>
-  <section id="addit-com">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi eligendi a consequatur odio perspiciatis sint numquam! Ipsam nesciunt cumque porro quae quam nisi reiciendis ut id labore ducimus nostrum vero tenetur repellendus veniam itaque, voluptate magni. Porro fugit debitis adipisci ipsa error repudiandae illum sequi molestiae cupiditate doloremque laudantium quisquam animi, facere temporibus sint quo mollitia vitae, hic asperiores est. Aut enim, natus iusto non amet sunt quia fugit commodi molestias assumenda ducimus tenetur dicta ratione ex hic quod. Doloremque voluptatibus reiciendis ab! Quasi error est natus nobis aliquam repellendus quo dicta labore eius! Commodi quisquam quos ullam omnis expedita laborum odit? Iure similique, iusto ab nemo in deserunt quidem officiis nam neque. Commodi quae pariatur harum laudantium ipsa tempore dicta qui magni culpa at adipisci nihil a molestias, repellat nisi assumenda, voluptates incidunt aliquid et quis saepe? Laborum exercitationem fugiat consequuntur, repudiandae dignissimos accusamus beatae earum expedita enim sint. Laudantium expedita tempora autem? Nobis corrupti deserunt, aliquid at expedita aliquam ex unde quia dolorem culpa non mollitia facere laborum eaque nostrum voluptates inventore dolorum sequi voluptas est? Ad corrupti neque cumque, repellat cupiditate, itaque maxime perspiciatis dolores, dicta consequatur rem similique quo! Necessitatibus dolor ducimus perferendis soluta, atque nihil corrupti laboriosam quae. Esse, delectus quae labore amet dolorem blanditiis dolores eveniet tenetur quam voluptates eos commodi, doloremque debitis suscipit similique in id consequatur at earum dicta eum aliquid ullam! Deserunt accusamus optio libero tenetur temporibus adipisci assumenda officiis dolorem, cumque possimus harum! Perferendis consequuntur necessitatibus cumque esse laborum sed dolore quasi ex placeat excepturi fuga aspernatur, veniam dolor omnis consectetur enim laboriosam amet praesentium possimus eius sequi! Error minus vitae modi, earum magnam voluptatibus quidem hic fugiat incidunt aut pariatur? Quo, quidem? Facilis nostrum, voluptatum a vero quis quisquam blanditiis. Nisi laudantium reprehenderit mollitia. Odio illum, minima doloribus quod iure vero quos nihil magni eaque alias minus similique mollitia aspernatur, eius repudiandae quas hic enim eos. Voluptatum, dicta mollitia velit exercitationem cum provident ullam iusto itaque, sequi omnis quos eius consectetur ipsam minus necessitatibus temporibus officiis, reiciendis magnam? Repudiandae quidem temporibus fuga dolorum? Impedit atque dolores sit blanditiis? Delectus odio modi labore, praesentium cumque provident, officia at iusto saepe exercitationem vero cum! Sint exercitationem cum odio consequuntur ipsum perferendis, unde ratione inventore vel rem aliquam animi, numquam doloribus placeat explicabo quisquam debitis! Soluta doloremque culpa quasi optio repellat deleniti quae eligendi ab, voluptatum enim modi, doloribus eos ipsa odio!</section>
+  <section id="repo-com"><div class="e-container">
+    <h2>Віддалені репозиторії</h2>
+    <h3>Підключення до віддаленого репозиторію</h3>
+    <p>Щоб завантажити що-небудь в віддалений репозиторій, спочатку потрібно до нього підключитися. Для того щоб до нього підключитись потрібно стоврити аккаун та репозиторій на GitHub або ыншому сервері. Реєстрація та установка може зайняти час, але всі подібні сервіси надають хорошу документацію.
+      Щоб зв'язати наш локальний репозиторій з репозиторієм на GitHub, виконаємо наступну команду в терміналі. URL сховища буде відрізнятись від вказаного</p>
+    <div class="code-wr">
+      <code class="">git remote add origin https://github.com/margarita666/E-course.git</code>
+    </div>
+    <p>Проект може мати кілька віддалених репозиторіїв одночасно. Щоб їх розрізняти, ми дамо їм різні імена. Зазвичай головний репозиторій називається origin.</p>
+
+    <h3>Відправка змін на сервер</h3>
+    <p>Зараз саме час переслати наш локальний комміт на сервер. Цей процес відбувається кожного разу, коли ми хочемо оновити дані в віддаленому репозиторії.
+      Команда, призначена для цього - push. Вона приймає два параметри: ім'я віддаленого сховища (ми назвали наш origin) і гілку, в яку необхідно внести зміни (master - це гілка за замовчуванням для всіх репозиторіїв).</p>
+    <div class="code-wr">
+      <code class="">git push origin master<br>
+        Enumerating objects: 5, done.<br>
+        Counting objects: 100% (5/5), done.<br>
+        Delta compression using up to 4 threads<br>
+        Compressing objects: 100% (3/3), done.<br>
+        Writing objects: 100% (3/3), 309 bytes | 103.00 KiB/s, done.<br>
+        Total 3 (delta 2), reused 0 (delta 0)<br>
+        remote: Resolving deltas: 100% (2/2), completed with 2 local objects.<br>
+        To https://github.com/margarita666/E-course.git<br>
+           9d67c6e..87a5a94  master -> master</code>
+      </div>
+      <p>Залежно від сервісу, який ви використовуєте, вам може знадобитися аутентифікуватися, щоб зміни вирушили. Якщо все зроблено правильно, то коли ви подивіться в віддалений репозиторій за допомогою браузера, ви побачите додані раніше файли</p>
+      
+      <h3>Клонування репозиторію</h3>
+      <p>Зараз інші користувачі GitHub можуть переглядати ваше сховище. Вони можуть завантажити з нього дані і отримати повністю працездатну копію вашого проекту за допомогою команди clone. Також ви самі можете стористатись цією командою працюючи, наприклад, з різних девайсів.</p>
+      <div class="code-wr">
+        <code class="">git clone https://github.com/margarita666/E-course.git</code>
+      </div>
+      <p>Новий локальний репозиторій створюється автоматично з GitHub в якості віддаленого сховища.</p>
+      <div class="code-wr">
+        <code class="">git add .</code>
+      </div>
+      <p>Де "." означає що необхідно додати все.</p> 
+
+      <h3>Запит змін з серверу</h3>
+      <p>Якщо ви зробили зміни в вашому віддаленому репозиторії, ви можете завантажити зміни на інший девайс за допомогою команди pull.</p>
+      <div class="code-wr">
+        <code class="">git pull origin master<br>
+          From https://github.com/margarita666/E-course.git<br>
+          * branch master -> FETCH_HEAD<br>
+          Already up-to-date.</code>
+      </div>
+      <p>Так як нових коммітів з тих пір, як ми склонували собі проект, не було, то ніяких змін доступних для скачування немає.</p>
+    </div>
+  </section>
+
+  <section id="branch-com">
+    <div class="e-container">
+      <h2>Розгалудження</h2>
+      <h3>Створення нової гілки</h3>
+      <p>Основна гілка в кожному сховищі називається master. Щоб створити ще одну гілку, використовуємо команду branch -name</p>
+      <div class="code-wr">
+        <code class="">git branch amazing_new_feature</code>
+      </div>
+      <p>Це створить нову гілку, поки що точну копію гілки master.</p>
+
+      <h3>Зміна гілки</h3>
+      <p>Зараз, якщо ми запустимо branch, ми побачимо дві доступні опції:</p>
+      <div class="code-wr">
+        <code class="">git branch<br>
+          amazing_new_feature<br>
+          * master</code>
+      </div>
+      <p>master - це активна гілка, вона позначена зірочкою. Але ми хочемо працювати з новою гілкою, так що нам знадобиться переключитися на іншу. Для цього скористаємося командою checkout, вона приймає один параметр - ім'я гілки, на яку необхідно переключитися.</p>
+      <div class="code-wr">
+        <code class="">git checkout amazing_new_feature</code>
+      </div>
+
+      <h3>Злиття гілок</h3>
+      <p>На нашій новій гілці буде ще одинм файл під назвою feature.html. Ми створимо його, додамо і додамо в комміт:</p>
+      <div class="code-wr">
+        <code class="">git add feature.html<br>
+          git commit -m "New feature complete."</code>
+      </div>
+      <p>Зміни завершені, тепер ми можемо перейти назад на гілку master.</p>
+      <div class="code-wr">
+        <code class="">git checkout master</code>
+      </div>
+      <p>Тепер, якщо ми відкриємо наш проект в файловому менеджері, ми не побачимо файлу feature.html, тому що ми переключилися назад на гілку master, в якій такого файлу не існує. Щоб він з'явився, потрібно скористатися merge для об'єднання гілок (застосування змін з гілки amazing_new_feature до основної версії проекту).</p>
+      <div class="code-wr">
+        <code class="">git merge amazing_new_feature</code>
+      </div>
+      <p>Тепер гілка master актуальна. Гілка amazing_new_feature більше не потрібна, і її можна видалити.</p>
+      <div class="code-wr">
+        <code class="">git branch -d awesome_new_feature</code>
+      </div>
+    </div>
+  </section>
+  <section id="addit-com">
+    <div class="e-container">
+      <h2>Додатково</h2>
+      <h3>Відстеження змін, зроблених в комміті</h3>
+      <p>У кожного комміта є свій унікальний ідентифікатор у вигляді рядка цифр і букв. Щоб переглянути список всіх коммітів і їх ідентифікаторів, можна використовувати команду log:</p>
+      <div class="code-wr">
+        <code class="">git log<br>
+          commit 87a5a941c275f9cd8897c96885c0bdf631e05734 (HEAD -> master, origin/master)<br>
+          Author: Margarita <margomimi82@gmail.com><br>
+          Date:   Thu Nov 19 22:11:28 2020 +0200<br>
+          
+              add base.html<br>
+          
+          commit 9d67c6e358354c0da68ada54369f5bbab2d1a331<br>
+          Author: margarita666_ <mchernysh@morebis.net><br>
+          Date:   Thu Nov 19 19:53:47 2020 +0200<br>
+          
+              quiz done</code>
+      </div>
+      <p>Як ви можете помітити, ідентифікатори досить довгі, але для роботи з ними не обов'язково копіювати їх цілком - перших декількох символів буде цілком достатньо. Щоб подивитися, що нового з'явилося в комміті, ми можемо скористатися командою show [commit]</p>
+      <div class="code-wr">
+        <code class="">git show 9d67c6e<br>
+          commit 9d67c6e358354c0da68ada54369f5bbab2d1a331 <br>    
+          Author: margarita666_ <mchernysh@morebis.net>  <br>     
+          Date:   Thu Nov 19 19:53:47 2020 +0200<br>
+          
+              quiz done<br>
+          
+          diff --git a/css/styles.min.css b/css/styles.min.css<br>
+          index 2464b9c..40c08f6 100644<br>
+          --- a/css/styles.min.css<br>
+          +++ b/css/styles.min.css</code>
+      </div>
+      <p>Щоб побачити різницю між двома коммітами, використовується команда diff (із зазначенням проміжку між коммітами):</p>
+      <div class="code-wr">
+        <code class="">git diff 87a5a941..9d67c6e <br>
+          diff --git a/base.html b/base.html<br>
+          index 765098e..b298912 100644<br>
+          --- a/base.html<br>
+          +++ b/base.html<br>
+          @@ -25,7 +25,7 @@</code>
+      </div>
+
+      <h3>Повернення файлу до попереднього стану</h3>
+      <p>Гіт дозволяє повернути вибраний файл до стану на момент певного коммітов. Це робиться вже знайомої нам командою checkout, яку ми раніше використовували для переходу між гілками. Але вона також може бути використана для переходу між коммітами (це досить поширена ситуація для Гіта - використання однієї команди для різних, на перший погляд, слабо пов'язаних завдань).
+        У наступному прикладі ми візьмемо файл index.html і відкотимо всі зміни, вчинені над ним до першого коммітов. Щоб зробити це, ми підставимо в команду ідентифікатор потрібного коммітов, а також шлях до файлу:</p>
+      <div class="code-wr">
+        <code class="">git checkout 09bd8cc1 index.html</code>
+      </div>
+    </div>
+  </section>
 </main>
 <footer class="footer">
     <div class="e-container row">

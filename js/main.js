@@ -78,8 +78,9 @@ function submitAnswers() {
   }
 
   // Display results
-  var results = document.getElementById('results');
-  results.innerHTML = '<h3>You scored <span>' + score + '</span> out of <span>' + total + '</span></h3>';
+	var results = document.getElementById('results');
+	results.classList.add('active')
+  results.innerHTML = '<h3>Правильних відповідей <span>' + score + '</span> з <span>' + total + '</span></h3>';
   //alert('You scored ' + score + ' out of ' + total);
   
   return false;
